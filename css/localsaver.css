@@ -1,0 +1,161 @@
+@charset "UTF-8";
+html {
+font-family:sans-serif;
+-ms-text-size-adjust:100%;
+-webkit-text-size-adjust:100%;
+}
+
+.wrapper {
+         overflow:auto;
+ }
+ 
+ @media screen and (min-width: 300px) {
+    #contentBox {width:300px;float:left;
+   }
+@media screen and (min-width: 600px) {
+    #contentBox {width:600px;float:left;
+}
+.mainLogo {
+	text-align: center;
+	background: #097AB2;
+	width: 700px;
+    height: 50px;
+}
+
+#couponHeader {
+             text-align: center;
+	         font-family: sans-serif;
+	         font-size: 70px;    
+	         font-weight: bold;
+             width: 700px;
+             height: 100px;
+	
+}
+
+#matchesFound {
+	text-align: center;
+	text-transform: uppercase;
+    font-family: sans-serif;	
+	font-size: 30px;
+	color: #ccc;
+    width:600px;      
+}
+
+#contentBox {
+	border-radius: 10px;
+    border: 1px solid #868788;
+    padding-top: 10px; 
+    width: 700px;
+    height: 900px; 
+}
+
+.imgBackground {
+    position:absolute; 
+    top: 350px; 
+    left: 10px; 
+    z-index: 1;
+}
+
+.imgThumbnail {
+	border: 5px solid #ffffff;
+    border-radius: 1em;
+    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.08);*/
+    -webkit-box-shadow: 0px 1px 8px 10px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 1px 8px 10px rgba(0,0,0,0.08);
+    box-shadow: 0px 1px 8px 10px rgba(0,0,0,0.08);
+	position:absolute; 
+    top: 600px; 
+    left: 50px; 
+    z-index: 2;
+}
+#cityTxt {
+	margin-top: -10px;
+    margin-left: 10px;
+    color:#666666;
+    font-family: sans-serif;	
+	font-size: 30px;
+	font-weight: bold;
+
+}
+#pinTxt {
+	margin-left: 10px;
+    font-family: sans-serif;	
+	}
+#distanceTxt {
+	font-family: sans-serif;
+	text-align: right;
+    float:right;
+    margin-top: 1px;
+    padding-right:20px;
+    color:#666666;
+    font-family: sans-serif;	
+	font-size: 20px;
+	font-weight: bold;
+}
+#categoryTxt {
+    position:absolute; 
+    top: 680px; 
+    left: 300px; 
+    z-index: 2;
+    color:#666666;
+	font-size: 30px;
+	font-family: arial;
+	text-align: center;
+	padding-left: 15px;
+}
+
+#companyTxt {
+    border: 5px solid #ffffff;
+    border-radius: .5em;
+    position:absolute; 
+    top: 800px; 
+    left: 50px; 
+    z-index: 2;
+	color: white;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 40px;
+	font-weight: lighter;
+	padding-top: 25px;
+	margin-top: 24px;
+	background: #097AB2;
+	overflow: hidden;
+    width: 600px;
+    height: auto;
+}
+
+#discountCoupon1 {
+	position:absolute; 
+    top: 950px; 
+    left: 50px; 
+    z-index: 2;
+    color: gray;
+	font-family: sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	padding-top: 13px;
+	padding-left: 5px;
+	margin-top: 20px;
+	background: white;
+    width: 600px;
+    height: 80px;
+    border-top: 1px solid #ccc;
+}
+
+#discountCoupon2 {
+	position:absolute; 
+    top: 1050px; 
+    left: 50px; 
+    z-index: 2;
+    color: gray;
+	font-family: sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	padding-top: 13px;
+	padding-left: 5px;
+	margin-top: 5px;
+	background: white;
+    width: 600px;
+    height: 80px;
+	border-top: 1px solid #ccc;
+}
