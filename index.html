@@ -1,20 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="dcterms.created" content="Mon, 18 Jan 2016 23:26:57 GMT">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title></title>
-	
-<Title>Code challenge</Title>
-<link rel="stylesheet" type="text/css" href="css/style.css"></link>
-    
-    <!--[if IE]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="dcterms.created" content="Tue, 19 Jan 2016 17:31:05 GMT">
+<meta name="description" content="Local saver coupons">
+<meta name="keywords" content="Local saver coupons">
+<!-- JQUERY -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- Javascript -->
+<script src="js/localsaver.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/localsaver.css">
+<title>Local saver coupons</title>
+</head>
 
-  </body>
-</html>
+<body>	
+<!-- Logo -->
+<div class="wrapper">
+	<header class="mainLogo">
+	    <img id="Logo" src="http://content.secondspace.com/frontend-test/localsaver-logo.png" height="40" width="200">
+	</header> 
+	<h1 id="couponHeader">Coupons &amp; Deals <br/>near You</h1>
+	  <div id="matchesFound">56 matches found</div>
+	
+<!-- Coupon content -->
+	<div id="contentBox">	
+	  
+		<img id="pinTxt" src="http://content.secondspace.com/frontend-test/pin.png"> 
+		<span id="cityTxt">Bellevue, WA</span> <span id="distanceTxt">4 mi</span>
+			  <div>
+			  <img  class="imgBackground" src="http://content.secondspace.com/frontend-test/tile1-main.jpg">
+			  <img class="imgThumbnail" src="http://content.secondspace.com/frontend-test/tile1-logo.jpg"> 
+			  <h3 id="categoryTxt">Nutrition and health</h3>
+			  <div id="companyTxt">Sound nourishment nutrition counselling</div>
+			  <div id="discountCoupon1">20% off regular price for cash paying clients</div>
+			  <div id="discountCoupon2">Save 10% off your next order</div>
+			  </div>		
+		</div>
+		
+</div>
+
+<script>
+
+	var xmlhttp = new XMLHttpRequest();
+	var url = "localserver.json";
+
+	xmlhttp.onreadystatechange = function() {
+	    if (xmlhttp.readyState == 8 && xmlhttp.status == 600) {
+	        var myArr = JSON.parse(xmlhttp.responseText);
+	        myFunction(myArr);
+	    }
+	};
+
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+
+	function myFunction(arr) {
+	    var out = "";
+	    var i;
+	    for(i = 0; i < arr.company.length - 1; i++) {
+	        out += '<a href="' + arr.company[i].companyName + '">' + 
+	        arr[i] + '</a><br>';
+				   document.getElementById("p1").innerHTML = "New text!";
+				   $( this ).text(arr.company[i].companyName);
+
+	        $( "#matchesFound" ).text( arr.count );
+	        $( "#discountCoupon" ).text( arr.company[1].coupons[0].title );
+	        $( "#company" ).text( arr.company[0].companyName );
+	        $( "#category" ).text( arr.company[0].category );
+	        $( "#cityTxt" ).text( arr.company[0].city );
+	        $( "#distanceTxt" ).text( arr.company[0].distance );
+			var htmlString = $( this ).html();
+			$( this ).button( "Clicked!!" );	
+			};
+			$( "#discountCoupon" ).text(function() {
+	        	$( this ).text( arr.company[0].companyName );
+				var htmlString = $( this ).html();
+				  $( this ).button( "Clicked!!" );
+	
+			});
+	    }
+	</script>
+</Body>
+</Html>
+			
