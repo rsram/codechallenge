@@ -1,0 +1,50 @@
+{
+  "count": 200,
+  "nextPage": true,
+  "company": [
+    {
+      "companyName": "Thai restaurant",
+      "city": "Seattle",
+      "state": "WA",
+      "category": "restaurant",
+      "distance": "2",
+      "coupons": [
+        {
+          "title": "Save 10% off your bill"
+        }
+      ]
+    },
+    {
+       "company": [
+    {
+      "companyName": "Chinese restaurant",
+      "city": "Seattle",
+      "state": "WA",
+      "category": "restaurant",
+      "distance": "2.5",
+      "coupons": [
+        {
+          "title": "Save 20% off your bill"
+        }
+      ]
+    },
+    {
+       "company": [
+    {
+      "companyName": "Vietnamese restaurant",
+      "city": "Seattle",
+      "state": "WA",
+      "category": "restaurant",
+      "distance": ".5",
+      "coupons": [
+        {
+          "title": "Save 30% off your bill"
+        }
+      ]
+        },
+        
+    },
+    
+    }
+  ]
+}
